@@ -22,18 +22,12 @@ const typeDefs = gql`
 
   type Mission {
     name: String
-    missionPatch(size: PatchSize): String
+    missionPatch(mission: String, size: PatchSize): String
   }
 
   enum PatchSize {
     SMALL
     LARGE
-  }
-
-  type Query {
-    launches: [Launch]!
-    launch(id: ID!): Launch
-    me: User
   }
 
   type Mutation {
